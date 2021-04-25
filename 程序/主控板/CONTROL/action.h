@@ -1,0 +1,32 @@
+///////////////////////////////////////////////////////////////////-=505-Tech=-///
+//CAUC拳皇-主控板-控制算法
+///////////////////////////////////////////////////////////////////-=505-Tech=-///
+//编写：徐天泽
+//中国民航大学电子科技创新创业实践基地505创客实验室
+///////////////////////////////////////////////////////////////////-=505-Tech=-///
+//本程序仅供学习参考，未经许可，不得用于其它任何用途
+///////////////////////////////////////////////////////////////////-=505-Tech=-///
+#ifndef __ACTION_H
+#define __ACTION_H
+///////////////////////////////////////////////////////////////////-=505-Tech=-///
+#include "main.h"
+
+#define WirelessStop(); {if(UART4_Res==__KEY_BACK)return;}
+///////////////////////////////////////////////////////////////////-=505-Tech=-///
+void Car_Run(int16_t speedl,int16_t speedr);
+void Car_Jump(void);
+uint8_t Car_WaitCMD(void);
+uint8_t Judge_Location(void);
+uint8_t Judge_Location_Corner(void);
+void Car_FindCorner(void);
+void Car_LeaveCorner(void);
+void Car_FaceRing(void);
+void PutChess_FM_Find(uint16_t waittime);
+void PutChess_L_Find(uint16_t speed,uint16_t waittime);
+void PutChess_R_Find(uint16_t speed,uint16_t waittime);
+void Car_PutChess(void);
+void Car_Battle(void);
+void Car_Battle2(void);
+///////////////////////////////////////////////////////////////////-=505-Tech=-///
+#endif
+///////////////////////////////////////////////////////////////////-=505-Tech=-///
